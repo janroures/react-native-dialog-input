@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       ios: {
         fontSize:18,
-        color:'#408AE2',
+        color:'#007bff',
         textAlign:'center',
         borderRightWidth: 5,
         borderColor: '#B0B0B0',
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       ios: {
         fontSize:18,
-        color:'#408AE2',
+        color:'#007bff',
         textAlign:'center',
         padding: 10,
       },
