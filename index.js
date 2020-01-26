@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Modal, TextInput, TouchableOpacity,
-         Platform } from 'react-native';
+         Platform, Dimensions } from 'react-native';
 
 class DialogInput extends React.Component{
   constructor(props){
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     flexDirection: 'column',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
     ...Platform.select({
       android:{
@@ -101,12 +101,14 @@ const styles = StyleSheet.create({
         backgroundColor:'#E3E6E7',
         borderRadius: 10,
         minWidth: 300,
+        marginTop:Dimensions.get('window').height/2 - 150,
       },
       android: {
         backgroundColor:'#fff',
         elevation: 24,
         minWidth: 280,
         borderRadius: 5,
+        marginTop:Dimensions.get('window').height/2 - 150,
       },
     }),
   },
@@ -150,11 +152,11 @@ const styles = StyleSheet.create({
   input_container:{
     textAlign:'left',
     fontSize: 16,
-    color: 'rgba(0,0,0,0.54)',
+    color: 'rgba(0,0,0,1)',
     ...Platform.select({
       ios: {
         backgroundColor: 'white',
-        borderRadius: 5,
+        // borderRadius: 5,
         paddingTop: 5,
 	      borderWidth: 1,
         borderColor: '#B0B0B0',
@@ -213,9 +215,9 @@ const styles = StyleSheet.create({
   },
   btn_modal_left:{
     ...Platform.select({
-      fontWeight: "bold",
       ios: {
         fontSize:18,
+        fontWeight: "bold",
         color:'#007bff',
         textAlign:'center',
         borderRightWidth: 5,
@@ -227,13 +229,13 @@ const styles = StyleSheet.create({
       android: {
         textAlign:'right',
         color:'#009688',
-        padding: 8
+        padding: 8,
+        fontWeight: "bold",
       },
     }),
   },
   btn_modal_right:{
     ...Platform.select({
-      fontWeight: "bold",
       ios: {
         fontSize:18,
         color:'#007bff',
