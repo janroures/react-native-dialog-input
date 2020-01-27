@@ -100,13 +100,15 @@ const styles = StyleSheet.create({
       ios: {
         backgroundColor:'#E3E6E7',
         borderRadius: 10,
-        minWidth: '80%',
+        maxWidth: '80%',
+        minWidth: '75%',
         marginTop:Dimensions.get('window').height/2 - 150,
       },
       android: {
         backgroundColor:'#fff',
         elevation: 24,
-        minWidth: '80%',
+        maxWidth: '80%',
+        minWidth: '75%',
         borderRadius: 5,
         marginTop:Dimensions.get('window').height/2 - 150,
       },
